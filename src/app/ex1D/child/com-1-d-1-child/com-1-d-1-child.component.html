@@ -1,1 +1,5 @@
-<p>com-1-d-1-child works!</p>
+<p class="fw-bold mb-0 mt-3">Child component</p>
+<div class="cover">
+  <input type="text" placeholder="Please enter" (input)="sendDataToParent($event)">
+  <p>Content: {{dataParent}}</p>
+</div>

@@ -7,33 +7,33 @@ import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit,
 })
 export class Com1BAComponent implements OnInit, OnChanges, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy{
   ngOnChanges(changes: SimpleChanges): void {
-    console.log('on changes');
+    // console.log('on changes');
   }
 
   ngOnInit(): void {
-    console.log('on init');
+    // console.log('on init');
   }
 
   ngDoCheck(): void {
-    console.log('do check');
+    // console.log('do check');
   }
 
   ngAfterContentInit(): void {
-    console.log('after content init');
+    // console.log('after content init');
   }
   
   ngAfterContentChecked(): void {
-    console.log('after content checked');
+    // console.log('after content checked');
   }
   
   ngAfterViewInit(): void {
-    console.log('after view init');
+    // console.log('after view init');
   }
   ngAfterViewChecked(): void {
-    console.log('after view checked');
+    // console.log('after view checked');
   }
   ngOnDestroy(): void {
-    console.log('on destroy');
+    // console.log('on destroy');
   }
   
 }

@@ -1,1 +1,6 @@
-<p>com-1-d-1 works!</p>
+<header class="fw-bold">Parent component</header>
+<div class="cover">
+  <input type="text" #inputText [value]="dataParent" (input)="dataParent = processEvent($event)" placeholder="Please enter">
+  <p>Content: {{dataChild}}</p>
+</div>
+<app-com-1-d-1-child [dataParent]="dataParent" (dataChange)="handleChildData($event)"></app-com-1-d-1-child>
