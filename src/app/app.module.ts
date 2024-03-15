@@ -19,6 +19,8 @@ import { MultiContentComponent } from './ex1F/multi-content/multi-content.compon
 import { ConditionalContentComponent } from './ex1F/conditional-content/conditional-content.component';
 import { TabsComponent } from './ex1F/child/tabs/tabs.component';
 import { Com2A1Component } from './ex2A/com-2-a-1/com-2-a-1.component';
+import { Com2B1Component } from './ex2B/com-2-b-1/com-2-b-1.component';
+import { Com2C1Component } from './ex2C/com-2-c-1/com-2-c-1.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +41,8 @@ import { Com2A1Component } from './ex2A/com-2-a-1/com-2-a-1.component';
     ConditionalContentComponent,
     TabsComponent,
     Com2A1Component,
+    Com2B1Component,
+    Com2C1Component,
   ],
   imports: [
     BrowserModule,
