@@ -2,7 +2,7 @@
   <li class="nav-item" *ngFor="let link of linkArr">
     <a class="nav-link active bg-light ms-2" aria-current="page" href="#">
       <ng-container *ngIf="linkTemplate; else noTemplate" >
-        <ng-container [ngTemplateOutlet]="linkTemplate" [ngTemplateOutletContext]="link: link"></ng-container>
+        <ng-container *ngTemplateOutlet="linkTemplate; context: {$implicit: link}"></ng-container>
       </ng-container>
       
       <ng-template #noTemplate>

@@ -7,5 +7,6 @@ import { Component, Input, TemplateRef } from '@angular/core';
 })
 export class TabsComponent {
   @Input() linkArr: string[] = []
-  @Input() linkTemplate: TemplateRef<any>
+  @Input() linkTemplate: TemplateRef<any> | undefined
+
 }
