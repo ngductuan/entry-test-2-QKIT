@@ -12,6 +12,8 @@ import { Com1C1ChildComponent } from './ex1C/child/com-1-c-1-child/com-1-c-1-chi
 import { Com1C2ChildComponent } from './ex1C/child/com-1-c-2-child/com-1-c-2-child.component';
 import { Com1D1Component } from './ex1D/com-1-d-1/com-1-d-1.component';
 import { Com1D1ChildComponent } from './ex1D/child/com-1-d-1-child/com-1-d-1-child.component';
+import { Com1E1Component } from './ex1E/com-1-e-1/com-1-e-1.component';
+import { Com1E2Component } from './ex1E/com-1-e-2/com-1-e-2.component';
 
 @NgModule({
   declarations: [
@@ -25,10 +27,12 @@ import { Com1D1ChildComponent } from './ex1D/child/com-1-d-1-child/com-1-d-1-chi
     Com1C2ChildComponent,
     Com1D1Component,
     Com1D1ChildComponent,
+    Com1E1Component,
+    Com1E2Component,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
