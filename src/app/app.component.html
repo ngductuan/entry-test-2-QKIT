@@ -15,10 +15,31 @@
     <app-com-1-c-2></app-com-1-c-2>
   </div>
 
-  <h6 class="fw-bold text-danger">Question 1D: Component interactions (Use EventEmitter)</h6>
+  <h6 class="fw-bold text-danger">Question 1D: Component interactions (Use
+    EventEmitter)</h6>
   <app-com-1-d-1></app-com-1-d-1>
 
-  <h6 class="fw-bold text-danger">Question 1E: Component communication (Use Observable)</h6>
+  <h6 class="fw-bold text-danger">Question 1E: Component communication (Use
+    Observable)</h6>
   <app-com-1-e-1></app-com-1-e-1>
   <app-com-1-e-2></app-com-1-e-2>
+
+  <h6 class="fw-bold text-danger">Question 1F: Content projection (slot)</h6>
+  <p class="text-primary mb-0">+ Single-slot content projection</p>
+  <app-single-content>
+    <p>This is content for Single-slot content projection</p>
+  </app-single-content>
+
+  <p class="text-primary mb-0">+ Multi-slot content projection</p>
+  <app-multi-content>
+    <p id="p1"> <strong>Id - (#p1)</strong> This is content for Multi-slot
+      content projection</p>
+    <p ngProjectAs="label"> <strong>(ngProjectAs="label")</strong> This is
+      content for Multi-slot content projection</p>
+    <p class="p3"> <strong>Class - (.p3)</strong> This is content for Multi-slot
+      content projection</p>
+  </app-multi-content>
+
+  <p class="text-primary mb-0">+ Conditional content projection</p>
+  <app-conditional-content></app-conditional-content>
 </div>

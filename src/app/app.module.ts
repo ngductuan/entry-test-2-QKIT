@@ -14,6 +14,10 @@ import { Com1D1Component } from './ex1D/com-1-d-1/com-1-d-1.component';
 import { Com1D1ChildComponent } from './ex1D/child/com-1-d-1-child/com-1-d-1-child.component';
 import { Com1E1Component } from './ex1E/com-1-e-1/com-1-e-1.component';
 import { Com1E2Component } from './ex1E/com-1-e-2/com-1-e-2.component';
+import { SingleContentComponent } from './ex1F/single-content/single-content.component';
+import { MultiContentComponent } from './ex1F/multi-content/multi-content.component';
+import { ConditionalContentComponent } from './ex1F/conditional-content/conditional-content.component';
+import { TabsComponent } from './ex1F/child/tabs/tabs.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +33,10 @@ import { Com1E2Component } from './ex1E/com-1-e-2/com-1-e-2.component';
     Com1D1ChildComponent,
     Com1E1Component,
     Com1E2Component,
+    SingleContentComponent,
+    MultiContentComponent,
+    ConditionalContentComponent,
+    TabsComponent,
   ],
   imports: [
     BrowserModule,

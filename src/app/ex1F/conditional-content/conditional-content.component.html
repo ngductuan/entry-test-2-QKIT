@@ -1,0 +1,31 @@
+<p> * If else ng-template</p>
+
+<button type="button" class="btn btn-{{color}} mb-4" (click)="changeColor()">Click</button>
+
+<div class="card">
+  <div class="card-header">
+    You have selected
+    <ng-container [ngTemplateOutlet]="counterTmpl"></ng-container>
+  </div>
+  <div class="card-body">
+    There are <ng-container [ngTemplateOutlet]="counterTmpl"></ng-container> items was
+    selected.
+  </div>
+  <div class="card-footer">
+    You have selected
+    <ng-container [ngTemplateOutlet]="counterTmpl"></ng-container>
+  </div>
+</div>
+
+<ng-template #counterTmpl>
+  <span class="badge bg-{{color}}">{{ counter }}</span> items
+</ng-template>
+
+<p class="mt-3">* Pass ng-template into a component</p>
+
+<ng-template #linkTemplate let-l>
+  {{l}}
+</ng-template>
+
+
+<app-tabs [linkArr]="linkArr" [linkTemplate]="linkTemplate"></app-tabs>
