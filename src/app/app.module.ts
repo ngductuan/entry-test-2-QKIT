@@ -22,10 +22,11 @@ import { Com2A1Component } from './ex2A/com-2-a-1/com-2-a-1.component';
 import { Com2B1Component } from './ex2B/com-2-b-1/com-2-b-1.component';
 import { Com2C1Component } from './ex2C/com-2-c-1/com-2-c-1.component';
 import { Com2D1Component } from './ex2D/com-2-d-1/com-2-d-1.component';
-import { FormatServicePipe } from './ex2D/format-service.pipe';
+import { FormatDate } from './ex2D/format-date.pipe';
 import { AdultPipe } from './ex2D/adult.pipe';
 import { Com2E1Component } from './ex2E/com-2-e-1/com-2-e-1.component';
 import { FormsModule } from '@angular/forms';
+import { Com2F1Component } from './ex2F/com-2-f-1/com-2-f-1.component';
 
 @NgModule({
   declarations: [
@@ -49,9 +50,10 @@ import { FormsModule } from '@angular/forms';
     Com2B1Component,
     Com2C1Component,
     Com2D1Component,
-    FormatServicePipe,
+    FormatDate,
     AdultPipe,
     Com2E1Component,
+    Com2F1Component,
   ],
   imports: [
     BrowserModule,

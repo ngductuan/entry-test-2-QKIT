@@ -9,9 +9,9 @@ interface AddressI {
 }
 
 @Pipe({
-  name: 'formatService',
+  name: 'FormatDate',
 })
-export class FormatServicePipe implements PipeTransform {
+export class FormatDate implements PipeTransform {
   transform(addr: AddressI): string {
     return (
       addr.addr1 +
