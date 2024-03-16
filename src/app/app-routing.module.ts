@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './ex3/home/home.component';
 import { DetailsComponent } from './ex3/details/details.component';
 import { ArticleComponent } from './ex3/article/article.component';
+import { FormComponent } from './ex4/form/form.component';
 
 const routes: Routes = [
   {
@@ -16,6 +17,10 @@ const routes: Routes = [
   {
     path: 'details/:slug',
     component: DetailsComponent,
+  },
+  {
+    path: 'form',
+    component: FormComponent,
   },
 ];
 

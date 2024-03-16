@@ -25,11 +25,18 @@ import { Com2D1Component } from './ex2D/com-2-d-1/com-2-d-1.component';
 import { FormatDate } from './ex2D/format-date.pipe';
 import { AdultPipe } from './ex2D/adult.pipe';
 import { Com2E1Component } from './ex2E/com-2-e-1/com-2-e-1.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Com2F1Component } from './ex2F/com-2-f-1/com-2-f-1.component';
 import { HomeComponent } from './ex3/home/home.component';
 import { DetailsComponent } from './ex3/details/details.component';
 import { ArticleComponent } from './ex3/article/article.component';
+import { FormComponent } from './ex4/form/form.component';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatTabsModule } from '@angular/material/tabs';
 
 @NgModule({
   declarations: [
@@ -60,13 +67,23 @@ import { ArticleComponent } from './ex3/article/article.component';
     HomeComponent,
     DetailsComponent,
     ArticleComponent,
+    FormComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    MatButtonModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatCheckboxModule,
+    FormsModule,
+    MatTabsModule,
+    ReactiveFormsModule,
   ],
-  providers: [],
+  providers: [
+    provideAnimationsAsync()
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

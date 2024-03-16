@@ -1,0 +1,36 @@
+<div class="container">
+  <form class="sign-in-form mt-4" [formGroup]="signInForm">
+    <h2>Sign in</h2>
+    <div class="row-control d-flex">
+      <mat-form-field appearance="outline" >
+        <mat-label>Username</mat-label>
+        <input matInput placeholder="Username" formControlName="username" />
+      </mat-form-field>
+      <!-- <small *ngIf="signInForm.get('username')?.errors?.['required']">Field is required.</small> -->
+      <small *ngIf="signInForm.get('username')?.touched && signInForm.get('username')?.errors?.['required']">* Username is required</small>
+      <small *ngIf="signInForm.get('username')?.errors?.['minlength']">* Min length is 6</small>
+      
+    </div>
+    <div class="row-control">
+      <mat-form-field appearance="outline">
+        <mat-label>Password</mat-label>
+        <input type="password" matInput placeholder="Password"
+          formControlName="password" />
+      </mat-form-field>
+
+      <small *ngIf="signInForm.get('password')?.touched && signInForm.get('password')?.errors?.['required']">* Password is required</small>
+      <small *ngIf="signInForm.get('password')?.touched && signInForm.get('password')?.errors?.['minlength']">* Min length is 6</small>
+    </div>
+    <!-- {{signInForm.controls.password.errors | json}} -->
+    <div class="row-control">
+      <mat-checkbox formControlName="rememberMe">Remember me</mat-checkbox>
+    </div>
+    <div class="row-control row-actions">
+      <button mat-raised-button color="primary" type="submit">Sign in</button>
+    </div>
+  </form>
+
+  <pre>
+    <!-- {{signInForm.value | json}} -->
+  </pre>
+</div>
