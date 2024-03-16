@@ -40,8 +40,12 @@ export class Com2D1Component {
     },
   ];
 
-  addNewUser(){
-    this.users = [...this.users, {name: 'New user', age: 28}]
+  addNewUserOver(){
+    this.users = [...this.users, {name: 'User 1', age: 28}]
+  }
+
+  addNewUserUnder(){
+    this.users = [...this.users, {name: 'User 2', age: 17}]
   }
 
   // formatAddress(addr: any) {

@@ -27,4 +27,5 @@ User list with age >= 18:
 <ul>
   <li *ngFor="let user of users | adult">{{user.name}} - {{user.age}}</li>
 </ul>
-<button (click)="addNewUser()">Add new</button>
+<button (click)="addNewUserOver()">Add new (>=18)</button>
+<button class="ms-4" (click)="addNewUserUnder()">Add new (&#60;18)</button>

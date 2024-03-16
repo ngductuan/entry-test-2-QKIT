@@ -25,6 +25,7 @@ import { Com2D1Component } from './ex2D/com-2-d-1/com-2-d-1.component';
 import { FormatServicePipe } from './ex2D/format-service.pipe';
 import { AdultPipe } from './ex2D/adult.pipe';
 import { Com2E1Component } from './ex2E/com-2-e-1/com-2-e-1.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -55,6 +56,7 @@ import { Com2E1Component } from './ex2E/com-2-e-1/com-2-e-1.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
