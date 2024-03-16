@@ -21,6 +21,10 @@ import { TabsComponent } from './ex1F/child/tabs/tabs.component';
 import { Com2A1Component } from './ex2A/com-2-a-1/com-2-a-1.component';
 import { Com2B1Component } from './ex2B/com-2-b-1/com-2-b-1.component';
 import { Com2C1Component } from './ex2C/com-2-c-1/com-2-c-1.component';
+import { Com2D1Component } from './ex2D/com-2-d-1/com-2-d-1.component';
+import { FormatServicePipe } from './ex2D/format-service.pipe';
+import { AdultPipe } from './ex2D/adult.pipe';
+import { Com2E1Component } from './ex2E/com-2-e-1/com-2-e-1.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +47,10 @@ import { Com2C1Component } from './ex2C/com-2-c-1/com-2-c-1.component';
     Com2A1Component,
     Com2B1Component,
     Com2C1Component,
+    Com2D1Component,
+    FormatServicePipe,
+    AdultPipe,
+    Com2E1Component,
   ],
   imports: [
     BrowserModule,

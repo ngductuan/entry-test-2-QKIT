@@ -1,0 +1,30 @@
+<p class="text-primary mb-0">+ Built-in pipe (date)</p>
+<p>Current date: {{currentDate | date}}</p>
+<p>Current date: {{currentDate | date:'shortDate'}}</p>
+<p>Current date: {{currentDate | date:'mediumDate'}}</p>
+<p>Current date: {{currentDate | date:'fullDate'}}</p>
+<p>Current date: {{currentDate | date:'yyyy-MM-dd'}}</p>
+
+<p class="text-primary mb-0">+ Built-in pipe (currency)</p>
+<p>Currency: {{250000 | currency:'VND'}}</p>
+
+<p class="text-primary mb-0">+ Built-in pipe (json)</p>
+<p>Info: {{userInfo | json}}</p>
+
+<p class="text-primary mb-0">+ Built-in pipe (async)</p>
+<p>Observable: {{interval$ | async}}</p>
+
+<p class="text-primary mb-0">+ Custom pipe (print string from object)</p>
+<p>Address line: {{addr | formatService}}</p>
+
+<p class="text-primary mb-0">+ Custom pipe (Print and update object)</p>
+Full user list:
+<ul>
+  <li *ngFor="let user of users">{{user.name}} - {{user.age}}</li>
+</ul>
+
+User list with age >= 18:
+<ul>
+  <li *ngFor="let user of users | adult">{{user.name}} - {{user.age}}</li>
+</ul>
+<button (click)="addNewUser()">Add new</button>
