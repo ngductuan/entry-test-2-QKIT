@@ -4,6 +4,7 @@ import { HomeComponent } from './ex3/home/home.component';
 import { DetailsComponent } from './ex3/details/details.component';
 import { ArticleComponent } from './ex3/article/article.component';
 import { FormComponent } from './ex4/form/form.component';
+import { Com5Component } from './ex5/com-5/com-5.component';
 
 const routes: Routes = [
   {
@@ -21,6 +22,10 @@ const routes: Routes = [
   {
     path: 'form',
     component: FormComponent,
+  },
+  {
+    path: 'companies',
+    component: Com5Component,
   },
 ];
 

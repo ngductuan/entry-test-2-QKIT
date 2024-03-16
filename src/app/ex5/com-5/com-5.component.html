@@ -1,0 +1,18 @@
+<div class="d-flex justify-content-center">
+  <table class="w-50">
+    <thead>
+      <tr>
+        <th width="20%">Company ID</th>
+        <th>Name</th>
+        <th>Country</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let com of companies">
+        <td>{{com.companyID}}</td>
+        <td>{{com.name}}</td>
+        <td>{{com.country}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

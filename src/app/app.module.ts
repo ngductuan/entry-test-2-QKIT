@@ -37,6 +37,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatTabsModule } from '@angular/material/tabs';
+import { HttpClientModule } from '@angular/common/http';
+import { Com5Component } from './ex5/com-5/com-5.component';
 
 @NgModule({
   declarations: [
@@ -68,6 +70,7 @@ import { MatTabsModule } from '@angular/material/tabs';
     DetailsComponent,
     ArticleComponent,
     FormComponent,
+    Com5Component,
     
   ],
   imports: [
@@ -80,6 +83,7 @@ import { MatTabsModule } from '@angular/material/tabs';
     FormsModule,
     MatTabsModule,
     ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [
     provideAnimationsAsync()
