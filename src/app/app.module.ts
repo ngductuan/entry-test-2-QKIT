@@ -27,6 +27,9 @@ import { AdultPipe } from './ex2D/adult.pipe';
 import { Com2E1Component } from './ex2E/com-2-e-1/com-2-e-1.component';
 import { FormsModule } from '@angular/forms';
 import { Com2F1Component } from './ex2F/com-2-f-1/com-2-f-1.component';
+import { HomeComponent } from './ex3/home/home.component';
+import { DetailsComponent } from './ex3/details/details.component';
+import { ArticleComponent } from './ex3/article/article.component';
 
 @NgModule({
   declarations: [
@@ -54,6 +57,9 @@ import { Com2F1Component } from './ex2F/com-2-f-1/com-2-f-1.component';
     AdultPipe,
     Com2E1Component,
     Com2F1Component,
+    HomeComponent,
+    DetailsComponent,
+    ArticleComponent,
   ],
   imports: [
     BrowserModule,
