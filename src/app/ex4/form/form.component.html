@@ -1,8 +1,8 @@
-<div class="container">
-  <form class="sign-in-form mt-4" [formGroup]="signInForm">
+<div class="container" style="width: 280px;">
+  <form class="sign-in-form mt-4" [formGroup]="signInForm" >
     <h2>Sign in</h2>
-    <div class="row-control d-flex">
-      <mat-form-field appearance="outline">
+    <div class="row-control">
+      <mat-form-field appearance="outline" class="w-100">
         <mat-label>Username</mat-label>
         <input matInput placeholder="Username" formControlName="username"
           (input)="usernameChange()" (blur)="usernameChange()"/>
@@ -11,7 +11,7 @@
     </div>
 
     <div class="row-control">
-      <mat-form-field appearance="outline">
+      <mat-form-field appearance="outline" class="w-100">
         <mat-label>Password</mat-label>
         <input type="password" matInput placeholder="Password"
           (input)="passwordChange()"
@@ -20,12 +20,12 @@
       </mat-form-field>
       <small>{{ passwordError ? '* ' + passwordError : '' }}</small>
     </div>
-    
+
     <!-- {{signInForm.controls.password.errors | json}} -->
-    <div class="row-control">
-      <mat-checkbox formControlName="rememberMe">Remember me</mat-checkbox>
+    <div class="row-control" style="margin-left: -10px; margin-top: -8px">
+      <mat-checkbox formControlName="rememberMe" style="padding-left: 0;">Remember me</mat-checkbox>
     </div>
-    <div class="row-control row-actions">
+    <div class="row-control row-actions d-flex justify-content-end">
       <button mat-raised-button color="primary" type="submit">Sign in</button>
     </div>
   </form>
