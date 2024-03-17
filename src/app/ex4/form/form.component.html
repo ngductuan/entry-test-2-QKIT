@@ -2,25 +2,25 @@
   <form class="sign-in-form mt-4" [formGroup]="signInForm">
     <h2>Sign in</h2>
     <div class="row-control d-flex">
-      <mat-form-field appearance="outline" >
+      <mat-form-field appearance="outline">
         <mat-label>Username</mat-label>
-        <input matInput placeholder="Username" formControlName="username" />
+        <input matInput placeholder="Username" formControlName="username"
+          (input)="usernameChange()" (blur)="usernameChange()"/>
       </mat-form-field>
-      <!-- <small *ngIf="signInForm.get('username')?.errors?.['required']">Field is required.</small> -->
-      <small *ngIf="signInForm.get('username')?.touched && signInForm.get('username')?.errors?.['required']">* Username is required</small>
-      <small *ngIf="signInForm.get('username')?.errors?.['minlength']">* Min length is 6</small>
-      
+      <small>{{ usernameError ? '* ' + usernameError : '' }}</small>
     </div>
+
     <div class="row-control">
       <mat-form-field appearance="outline">
         <mat-label>Password</mat-label>
         <input type="password" matInput placeholder="Password"
+          (input)="passwordChange()"
+          (blur)="passwordChange()"
           formControlName="password" />
       </mat-form-field>
-
-      <small *ngIf="signInForm.get('password')?.touched && signInForm.get('password')?.errors?.['required']">* Password is required</small>
-      <small *ngIf="signInForm.get('password')?.touched && signInForm.get('password')?.errors?.['minlength']">* Min length is 6</small>
+      <small>{{ passwordError ? '* ' + passwordError : '' }}</small>
     </div>
+    
     <!-- {{signInForm.controls.password.errors | json}} -->
     <div class="row-control">
       <mat-checkbox formControlName="rememberMe">Remember me</mat-checkbox>

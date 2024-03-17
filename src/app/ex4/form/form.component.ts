@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, DoCheck, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import {
   AbstractControl,
   FormBuilder,
@@ -12,44 +12,53 @@ import {
   templateUrl: './form.component.html',
   styleUrl: './form.component.scss',
 })
-export class FormComponent implements OnInit {
+export class FormComponent {
   // signInForm = new FormGroup({
   //   username: new FormControl(''), // <== default value
   //   password: new FormControl(''), // <== default value
   //   rememberMe: new FormControl(false), // <== default value
   // });
 
-  usernameControl: AbstractControl | undefined;
+  // usernameControl: AbstractControl | undefined;
+  usernameData: string = '';
+  passwordData: string = '';
+
+  usernameError: string = ''
+  passwordError: string = ''
 
   signInForm = this.fb.group({
-    username: [
-      '',
-      [
-        Validators.required,
-        Validators.minLength(6),
-      ],
-    ],
-    password: [
-      '',
-      [
-        Validators.required,
-        Validators.minLength(6),
-      ],
-    ],
+    username: ['', [Validators.required, Validators.minLength(6)]],
+    password: ['', [Validators.required, Validators.minLength(6)]],
     rememberMe: false,
   });
 
   constructor(private fb: FormBuilder) {}
 
-  ngOnInit(): void {
-    // const control = this.signInForm.get('username');
-    // if (control !== null) {
-    //   this.usernameControl = control;
+  usernameChange(){
+    const usernameControl = this.signInForm.get('username');
 
-    //   this.usernameControl.setErrors({
-    //     required: 'Username is required.',
-    //     minlength: 'Username must be at least 6 characters long.',
-    //   });
-    // }
+    if ((usernameControl?.pristine || usernameControl?.dirty) && usernameControl?.invalid) {
+      if (usernameControl?.hasError('required')) {
+        this.usernameError = 'Username is required';
+      }else if(usernameControl?.hasError('minlength')){
+        this.usernameError = 'Min length is 6';
+      }
+    }else{
+      this.usernameError = ''
+    }
+  }
+
+  passwordChange(){
+    const passwordControl = this.signInForm.get('password');
+    
+    if ((passwordControl?.pristine || passwordControl?.dirty) && passwordControl?.invalid) {
+      if (passwordControl?.hasError('required')) {
+        this.passwordError = 'Password is required';
+      }else if(passwordControl?.hasError('minlength')){
+        this.passwordError = 'Min length is 6';
+      }
+    }else{
+      this.passwordError = ''
+    }
   }
 }
